@@ -11,10 +11,13 @@ public class Cars {
     private long id;
 
     private String color;
+    private String origColor;
+    private boolean isOriginalColor;
 
     private String model;
 
     private String vin;
+
 
     public long getId() {
         return id;
@@ -47,4 +50,23 @@ public class Cars {
     public void setVin(String vin) {
         this.vin = vin;
     }
+
+    public String getOrigColor() {
+        return origColor;
+    }
+
+    public void setOrigColor(String origColor) {
+        this.origColor = origColor;
+    }
+
+    public boolean isOriginalColor() {
+        return isOriginalColor;
+    }
+
+    public void setOriginalColor(boolean originalColor) {
+        isOriginalColor = originalColor;
+
+
+    }
+
 }
