@@ -24,8 +24,7 @@ public class CarsRestController {
     @PostMapping("/cars")
     @ResponseStatus(HttpStatus.CREATED)
     public Cars saveBook(@RequestBody Cars cars) {
-        //cars.setOriginalColor(true);
-
+        cars.setOriginalColor(true);
         return repository.save(cars);
     }
 
@@ -35,6 +34,13 @@ public class CarsRestController {
     public Collection<Cars> getAllBooks() {
 
         return (Collection<Cars>) repository.findAll();
+    }
+
+    @GetMapping("/cars")
+    @ResponseStatus(HttpStatus.OK)
+    public Collection<Cars> getAll() {
+
+        return (Collection<Cars>) repository.findCarsByIdAndOAndOriginalColorIsTrue();
     }
 
     //Получения юзера по id
@@ -57,8 +63,7 @@ public class CarsRestController {
                     entity.setModel(cars.getModel());
                     entity.setVin(cars.getVin());
                     entity.setColor(cars.getColor());
-                    //entity.setOriginalColor(cars.isOriginalColor());
-                    //entity.setOriginalColor(false);
+                    entity.setOriginalColor(false);
                     return repository.save(entity);
                 })
                 .orElseThrow(() -> new EntityNotFoundException("Car with id = Not found"));

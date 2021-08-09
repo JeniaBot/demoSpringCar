@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface CarsRepository extends CrudRepository<Cars, Long> {
-    List <Cars> findAllByManufacturerAndDeletedIsFalse(String manufacturer);
+public interface CarsRepository extends JpaRepository<Cars, Long> {
+List<Cars> findCarsByIdAndOAndOriginalColorIsTrue();
 
 }
