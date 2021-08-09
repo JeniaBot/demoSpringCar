@@ -40,7 +40,7 @@ public class CarsRestController {
     @ResponseStatus(HttpStatus.OK)
     public Collection<Cars> getAll() {
 
-        return (Collection<Cars>) repository.findCarsByIdAndOAndOriginalColorIsTrue();
+        return (Collection<Cars>) repository.findCarsByIdAndOAndOriginalColor();
     }
 
     //Получения юзера по id
