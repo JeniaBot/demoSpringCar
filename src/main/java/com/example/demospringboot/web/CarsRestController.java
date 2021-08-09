@@ -29,14 +29,14 @@ public class CarsRestController {
     }
 
     //Получение списка юзеров
-    @GetMapping("/cars/origColor")
+    @GetMapping("/cars")
     @ResponseStatus(HttpStatus.OK)
     public Collection<Cars> getAllBooks() {
 
         return (Collection<Cars>) repository.findAll();
     }
 
-    @GetMapping("/cars")
+    @GetMapping("/cars/origColor")
     @ResponseStatus(HttpStatus.OK)
     public Collection<Cars> getAll() {
 
