@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface CarsRepository extends JpaRepository<Cars, Long> {
 //List<Cars> findCarsByIdAndOAndOriginalColorIsTrue();
-List<Cars> findCarsByIdAndOAndOriginalColor();
+List<Cars> findCarsByIdAndColorIsTrue();
 }
