@@ -29,7 +29,7 @@ public class CarsRestController {
     }
 
     //Получение списка юзеров
-    @GetMapping("/cars")
+    @GetMapping("/cars/origColor")
     @ResponseStatus(HttpStatus.OK)
     public Collection<Cars> getAllBooks() {
 
